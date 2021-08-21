@@ -1,6 +1,6 @@
 #!/bin/bash
 ffmpeg  \
-	-i "rtsp://admin:immvgHm2v!g7v!si@192.168.1.115:554" \
+	-i "rtsp://$CAMERA_USER:$CAMERA_PASS@192.168.1.115:554" \
 	-preset ultrafast -crf 18 -sc_threshold 0 -g 48 -keyint_min 48 \
 	-f hls -hls_time 2 -hls_list_size 2 -hls_playlist_type event \
 	-flags +cgop \
